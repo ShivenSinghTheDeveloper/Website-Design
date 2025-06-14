@@ -1,0 +1,25 @@
+/*
+# - id
+same name for tag
+class is period
+*/
+
+p {
+    color:firebrick;
+    font-size: 500px;
+    font-weight: 900;
+}
+.p1 {
+    color:blue;
+}
+.mainContent {
+    color:green;
+}
+#link {
+    color: coral;
+}
+
+.speed {
+    height: 100px;
+    width: 100px;
+}
