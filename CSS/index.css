@@ -3,23 +3,247 @@
 same name for tag
 class is period
 */
+body {
+    font-family: 'Rubik', sans-serif !important;
+    background: linear-gradient(-45deg, #12162A, #180d7a, #1559a7, #0523328a);
+    animation: gradient 30s ease infinite;
+    background-size: 5000% 5000%;
+}
+@keyframes gradient {
+    0% {
+        background-position:0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+.main-content {
+    color: white;
+}
 
-p {
-    color:firebrick;
-    font-size: 500px;
-    font-weight: 900;
-}
-.p1 {
-    color:blue;
-}
-.mainContent {
-    color:green;
-}
-#link {
-    color: coral;
+.mainTitle {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
 }
 
-.speed {
-    height: 100px;
-    width: 100px;
+.subTitles {
+    margin-bottom: 30px !important;
+}
+
+.name {
+    color: white !important;
+}
+
+
+
+.position {
+    color: white !important;
+}
+
+.education {
+    color: white !important;
+}
+
+.projects {
+    color: white !important;
+}
+
+.experience {
+    color: white !important;
+}
+
+.edu-summary {
+    color: white !important;
+}
+
+.proj-summary {
+    color: white !important;
+}
+
+.exp-summary {
+    color: white !important;
+}
+
+.section-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    margin: 1rem;
+}
+
+
+.section-container:hover {
+    background-color: rgba(20, 112, 182, 0.87);
+    transform: scaleY(1.02);
+    box-shadow: 0 4px 8px black !important;
+    transform: translateY(-5px);
+}
+
+
+
+/*This is for expandable effect*/
+.expandable-header {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.expandable-header:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.expandable-header h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expand-icon {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.expandable-header.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.expandable-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    margin-top: -1rem;
+    padding-top: 0;
+}
+
+.expandable-content.expanded {
+    max-height: 500px;
+    padding: 1rem;
+    padding-top: 1rem;
+}
+
+.expandable-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expandable-content li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.expandable-content.expanded li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.expandable-content li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.expandable-content li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.expandable-content li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.expandable-content li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.expandable-content li:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.expandable-content li:last-child {
+    border-bottom: none;
+}
+
+.expandable-content li:before {
+    content: "▸";
+    color: #ffd700;
+    margin-right: 0.5rem;
+    font-weight: bold;
+}
+
+.courses-row {
+    margin-bottom: 40px !important;
+}
+
+.selfDriving {
+    height: 300px;
+    width: 600px;
+}
+
+.inspiritContent {
+    padding-left: 125px !important;
+    font-size: larger !important;
+}
+
+@media (max-width: 1100px) {
+    .profile-image {
+        height: 200px !important;
+        width: 200px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        padding: 1rem 0;
+    }
+
+    .section-container {
+        padding: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .profile-image {
+        max-height: 150px;
+        width: 150px;
+    }
+
+    /* Stack sections vertically on mobile */
+    .mobile-stack {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+
+    .mobile-stack>div {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .profile-image {
+        max-height: 120px;
+        width: 120px;
+    }
+
+    .section-container {
+        padding: 1rem;
+    }
 }
