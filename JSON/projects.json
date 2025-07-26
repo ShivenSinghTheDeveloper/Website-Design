@@ -1,0 +1,50 @@
+{
+  "cpp": [
+    {
+      "title": "AES Encryption Program",
+      "description": "C++ program to encrypt and decrypt text with AES encryption.",
+      "image": "img/lock (1).png",
+      "alt": "AES Software Img",
+      "link": "https://github.com/ShivenSinghTheDeveloper/EncryptionSoftware2"
+    },
+    {
+      "title": "Calendar Application",
+      "description": "A C++ program to manage scheduling of events for users.",
+      "image": "img/calendar (1).png",
+      "alt": "Calendar App Img",
+      "link": "https://github.com/ShivenSinghTheDeveloper/Calendar"
+    },
+    {
+      "title": "Chemical Equation Balancer",
+      "description": "Application developed using C++ to balance provided chemical equations.",
+      "image": "img/chemistry.png",
+      "alt": "Chem balancer img",
+      "link": "https://github.com/ShivenSinghTheDeveloper/Chemical-Equation-Balancer"
+    },
+    {
+      "title": "Wikipedia Discord Bot",
+      "description": "A C++ Discord Bot that uses the Wikipedia API to process requests for summaries of information.",
+      "image": "img/wikipedia.png",
+      "alt": "fact check bot img",
+      "link": "https://github.com/ShivenSinghTheDeveloper/Wikipedia-Discord-Bot"
+    }
+  ],
+  "js": [
+    {
+      "title": "Pokemon Discord Bot",
+      "description": "A JavaScript Discord Bot that uses the Pokemon API to display an image of a Pokemon and prompt the user to guess the Pokemon.",
+      "image": "img/pokemon-icon-png-22.jpg",
+      "alt": "JS Project Img",
+      "link": "https://github.com/your-js-project"
+    }
+  ],
+  "ue5": [
+    {
+      "title": "Hangman 3D",
+      "description": "A 3D Hangman game made in Unreal Engine with multiple difficulties with different word lengths.",
+      "image": "img/hangman-game.png",
+      "alt": "UE5 Demo Img",
+      "link": "https://github.com/ShivenSinghTheDeveloper/Hangman-3D"
+    }
+  ]
+}
