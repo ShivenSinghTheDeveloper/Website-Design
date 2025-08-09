@@ -8,7 +8,19 @@ body {
     background: linear-gradient(-45deg, #12162A, #060325, #02223f, #0b0251);
     animation: gradient 30s ease infinite;
     background-size: 5000% 5000%;
+    margin: 0 !important;
+    padding: 0 !important;
 }
+
+h1, h2, h3 {
+    margin: 0.5rem 0;
+}
+
+
+ul {
+    padding-left: 1.2rem;
+}
+
 @keyframes gradient {
     0% {
         background-position:0% 50%;
@@ -22,48 +34,21 @@ body {
 }
 .main-content {
     color: white;
+    padding: 1rem;
 }
 
 .mainTitle {
     margin-top: 50px !important;
     margin-bottom: 50px !important;
+    font-size: clamp(2rem, 5vw, 3.5rem) !important;
 }
 
 .subTitles {
     margin-bottom: 30px !important;
+    font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
 }
 
-.name {
-    color: white !important;
-}
-
-
-
-.position {
-    color: white !important;
-}
-
-.education {
-    color: white !important;
-}
-
-.projects {
-    color: white !important;
-}
-
-.experience {
-    color: white !important;
-}
-
-.edu-summary {
-    color: white !important;
-}
-
-.proj-summary {
-    color: white !important;
-}
-
-.exp-summary {
+.name, .position, .education, .projects, .experience, .edu-summary, .proj-summary, .exp-summary {
     color: white !important;
 }
 
@@ -83,6 +68,7 @@ body {
     transform: scaleY(1.02);
     box-shadow: 0 4px 8px black !important;
     transform: translateY(-5px);
+    cursor:pointer;
 }
 
 
@@ -201,11 +187,15 @@ body {
 
 .inspiritContent {
     padding-left: 125px !important;
-    font-size: larger !important;
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem) !important;
 }
 
 .languageButton {
-    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
     height: 125px !important;
     width: 250px !important;
     margin: auto !important;
@@ -221,10 +211,11 @@ body {
 }
 
 .languageButton:hover {
-    background: rgba(20, 112, 182, 0.87);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    background-color: rgba(20, 112, 182, 0.87);
+    transform: scaleY(1.02);
+    box-shadow: 0 4px 8px black !important;
+    transform: translateY(-5px);
+    cursor:pointer;
 }
 
 
@@ -289,46 +280,39 @@ body {
     font-size: 20px;
 }
 
-@media (max-width: 1100px) {
-    .profile-image {
-        height: 200px !important;
-        width: 200px !important;
-    }
+/* === Responsive additions === */
+img { max-width: 100%; height: auto; }
+
+/* Avoid overly tall boxes on small screens */
+@media (max-width: 575.98px) {
+  .experienceBox {
+    height: auto;
+    width: 100%;
+    padding: 1rem;
+  }
+  .expIcon { width: 88px; height: 88px; }
+  .expText { font-size: 16px; }
+
+  .inspiritContent { padding-left: 0 !important; margin-top : 20px}
 }
 
-@media (max-width: 768px) {
-    .main-content {
-        padding: 1rem 0;
-    }
+/* Tablets */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .experienceBox {
+    height: auto;
+    width: 90%;
+  }
 
-    .section-container {
-        padding: 1.5rem;
-        margin: 0.5rem 0;
-    }
-
-    .profile-image {
-        max-height: 150px;
-        width: 150px;
-    }
-
-    /* Stack sections vertically on mobile */
-    .mobile-stack {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-
-    .mobile-stack>div {
-        margin-bottom: 2rem;
-    }
+  .inspiritContent { padding-left: 0 !important; margin-top : 20px}
 }
 
-@media (max-width: 576px) {
-    .profile-image {
-        max-height: 120px;
-        width: 120px;
-    }
-
-    .section-container {
-        padding: 1rem;
-    }
+/* Keep the original larger layout on desktops */
+@media (min-width: 992px) {
+  .experienceBox {
+    height: 50vh;
+    width: 80%;
+  }
 }
+
+/* Make long headings wrap nicely */
+.mainTitle, .subTitles { word-wrap: break-word; overflow-wrap: anywhere; }

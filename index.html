@@ -14,64 +14,51 @@
 <body>
     <div class="container-fluid main-content">
         <!-- Header Section -->
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="mainTitle">Shiven Singh</h1>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col text-center my-2">
-                <h2 class="subTitles">Software Developer</h2>
-            </div>
+        <div class="text-center">
+            <h1 class="mainTitle">Shiven Singh</h1>
+            <h2 class="subTitles">Software Developer</h2>
         </div>
 
         <!-- Main Content Section -->
-        <div class="row mobile-stack justify-content-center align-items-center my-4">
+        <div class="row justify-content-center align-items-center my-4 text-center">
             <!-- Education Section -->
-            <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center align-items-center">
-                <div class="section-container text-center py-1">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="scroll-btn section-container" data-target="education">
                     <h3 class="section-title education">Education</h3>
-                    <p class="mt-3 edu-summary">Click to explore my academic background and qualifications.</p>
+                    <p class="edu-summary">Click to explore my academic background and qualifications.</p>
                 </div>
             </div>
 
             <!-- Profile Image -->
-            <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center align-items-center">
+            <div class="col-lg-4 col-md-6 col-12 my-3 my-lg-0">
                 <img src="img/image 4.png" alt="Shiven Singh" class="profile-image">
             </div>
 
             <!-- Projects Section -->
-            <div class="col-lg-4 col-md-4 col-12 d-flex justify-content-center align-items-center">
-                <div class="section-container text-center py-1">
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="scroll-btn section-container" data-target="projects">
                     <h3 class="section-title projects">Projects</h3>
-                    <p class="mt-3 proj-summary">Discover my latest work and technical achievements.</p>
+                    <p class="proj-summary">Discover my latest work and technical achievements.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+                <div class="scroll-btn section-container" data-target="experience">
+                    <h3 class="section-title projects">Experience</h3>
+                    <p class="proj-summary">Learn about my professional journey and expertise.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Experience Section -->
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto text-center my-4">
-                <div class="section-container py-1">
-                    <h2 class="section-title experience">Experience</h2>
-                    <p class="mt-3 exp-summary">Learn about my professional journey and expertise.</p>
-                </div>
-            </div>
+        <div class="text-center mt-5" id="education">
+            <h1 class="mainTitle">Education</h1>
+            <h2 class="subTitles">Grandview High School</h2>
         </div>
 
-        <div class="row">
-            <div class="col-12 text-center">
-                <h1 class="mainTitle">Education</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 text-center">
-                <h2 class="subTitles">Grandview High School</h2>
-            </div>
-        </div>
+        <!--Start here for responsiveness next class-->
+
         <div class="row courses-row">
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="expandable-header" onclick="toggleExpand('courses')">
                     <h3>CS Courses Taken <span class="expand-icon">▼</span></h3>
                 </div>
@@ -85,7 +72,7 @@
                 </div>
 
             </div>
-            <div class="col-6">
+            <div class="col-12 col-md-6">
                 <div class="expandable-header" onclick="toggleExpand('extracurriculars')">
                     <h3>Extracurriculars<span class="expand-icon">▼</span></h3>
                 </div>
@@ -100,38 +87,48 @@
                 </div>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-12 text-center">
+            <div class="col-12 text-center" id="experience">
                 <h1 class="mainTitle">Experience</h1>
-                <h3 class = "subTitles">theCoderSchool</h3>
+                <h3 class="subTitles">theCoderSchool</h3>
             </div>
         </div>
-        <div class = "row">
-            <div class = "col-6 d-flex justify-content-center align-items-center">
-                <div class = "experienceBox text-center">
+
+
+
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <div class="experienceBox text-center">
                     <img src="img/coding.png" alt="coding icon" class="expIcon">
                     <h3>Learning</h3>
-                    <p class = "expText">I first began programming at around eight years old with Scratch and JavaScript. In 2020, I enrolled at theCoderSchool and learned Python as my first language. I became able to use libraries such as Pandas, Matplotlib, Seaborn, SQLite3, etc. Later on, I began making games in Unreal Engine and developing software using C++.</p>
+                    <p class="expText">I first began programming at around eight years old with Scratch and JavaScript.
+                        In 2020, I enrolled at theCoderSchool and learned Python as my first language. I became able to
+                        use libraries such as Pandas, Matplotlib, Seaborn, SQLite3, etc. Later on, I began making games
+                        in Unreal Engine and developing software using C++.</p>
                 </div>
             </div>
-            <div class = "col-6 d-flex justify-content-center align-items-center">
-                <div class = "experienceBox text-center">
+            <div class="col-12 col-md-6  d-flex justify-content-center align-items-center">
+                <div class="experienceBox text-center">
                     <img src="img/teacher.png" alt="teaching icon" class="expIcon">
                     <h3>Teaching</h3>
-                    <p class = "expText">When I was in middle school, I began volunteering at theCoderSchool to aid in teaching students. I shadowed during lessons to learn how to properly teach and then became a volunteer coding instructor assistant in various languages such as Scratch, Python, and Java. During the summer of my sophomore year in high school, I was hired as a coding camp coach to teach Python to a group of students and guide them in developing their projects.</p>
+                    <p class="expText">When I was in middle school, I began volunteering at theCoderSchool to aid in
+                        teaching students. I shadowed during lessons to learn how to properly teach and then became a
+                        volunteer coding instructor assistant in various languages such as Scratch, Python, and Java.
+                        During the summer of my sophomore year in high school, I was hired as a coding camp coach to
+                        teach Python to a group of students and guide them in developing their projects.</p>
                 </div>
             </div>
         </div>
-        
 
 
         <div class="row">
-            <div class="text-center">
+            <div class="text-center mt-4">
                 <h3 class="subTitles">Inspirit AI Bootcamp</h3>
             </div>
-            <div class="col-6 inspiritContent">
+            <div class="col-12 col-md-6 inspiritContent">
                 <p class="aiDesc">During this 25-hour bootcamp, I did the following:</p>
-                <ul>
+                <ul>    
                     <li>Programmed in Python</li>
                     <li>Collaborated with a small team of peers</li>
                     <li>Learned about the ethics and applications of AI</li>
@@ -142,17 +139,19 @@
                     <li>Prepared and delivered a presentation with a group on our object-detection project</li>
                 </ul>
             </div>
-            <div class="col-6 text-center">
+            <div class="col-12 col-md-6 text-center">
                 <img src="img/self-driving car.png" alt="Photo from Bootcamp" class="selfDriving">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-12 text-center project-s">
+            <div class="text-center project-s mt-5" id="projects">
                 <h1 class="mainTitle">Notable Projects</h1>
             </div>
         </div>
+
         <div class="row">
-            <div class="col-4">
+            <div class="col-lg-4 col-md-12">
                 <div class="row languageSection">
                     <div class="languageButton" data-lang="cpp">
                         <img src="img/cpp.png" alt="CPP Logo" class="codeLogo">
@@ -169,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-8">
+            <div class="col-lg-8 col-md-12">
                 <div id="projectsContainer"></div>
             </div>
 
@@ -177,7 +176,7 @@
 
         </div>
 
-        
+
 
     </div>
 
@@ -186,6 +185,7 @@
     <script src="JS/index.js"></script>
     <script src="JS/projects.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="JS/scroll.js"></script>
 </body>
 
 </html>
