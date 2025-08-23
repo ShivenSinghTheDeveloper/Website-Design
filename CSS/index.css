@@ -3,6 +3,9 @@
 same name for tag
 class is period
 */
+
+/*Next class: close to fix the experiencebox but there is a scroll appearing*/
+
 body {
     font-family: 'Rubik', sans-serif !important;
     background: linear-gradient(-45deg, #12162A, #060325, #02223f, #0b0251);
@@ -12,7 +15,9 @@ body {
     padding: 0 !important;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     margin: 0.5rem 0;
 }
 
@@ -23,15 +28,18 @@ ul {
 
 @keyframes gradient {
     0% {
-        background-position:0% 50%;
+        background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
 }
+
 .main-content {
     color: white;
     padding: 1rem;
@@ -48,7 +56,14 @@ ul {
     font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
 }
 
-.name, .position, .education, .projects, .experience, .edu-summary, .proj-summary, .exp-summary {
+.name,
+.position,
+.education,
+.projects,
+.experience,
+.edu-summary,
+.proj-summary,
+.exp-summary {
     color: white !important;
 }
 
@@ -68,7 +83,7 @@ ul {
     transform: scaleY(1.02);
     box-shadow: 0 4px 8px black !important;
     transform: translateY(-5px);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
@@ -181,12 +196,14 @@ ul {
 }
 
 .selfDriving {
-    height: 300px;
-    width: 600px;
+    width: 100% !important;
+    max-width: 500px !important;
+    height: auto !important;
+    object-fit: contain !important;
 }
 
 .inspiritContent {
-    padding-left: 125px !important;
+    padding-left: clamp(1rem, 3vw, 2rem) !important;
     font-size: clamp(0.9rem, 2.5vw, 1.2rem) !important;
 }
 
@@ -196,9 +213,10 @@ ul {
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
-    height: 125px !important;
-    width: 250px !important;
-    margin: auto !important;
+    min-height: 80px !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    margin: 0 auto 15px auto !important;
     align-items: center !important;
     justify-content: center !important;
     display: flex !important;
@@ -215,21 +233,21 @@ ul {
     transform: scaleY(1.02);
     box-shadow: 0 4px 8px black !important;
     transform: translateY(-5px);
-    cursor:pointer;
+    cursor: pointer;
 }
 
 
 
 .codeLogo {
-    height: 75px !important;
-    width: 75px !important;
-
+    height: clamp(40px, 8vw, 75px) !important;
+    width: clamp(40px, 8vw, 75px) !important;
+    object-fit: contain !important;
 }
 
 .prjtImg {
     image-rendering: auto !important;
-    height: 150px !important;
-    width: 150px !important;
+    height: clamp(80px, 15vw, 150px) !important;
+    width: clamp(80px, 15vw, 150px) !important;
     object-fit: contain !important;
 }
 
@@ -252,16 +270,23 @@ ul {
     margin-bottom: 35px !important;
 }
 
+
+
 .experienceBox {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    height: 50vh;
-    width: 80%;
-    padding: 1.5rem;
-    margin-bottom: 35px;
-    border-radius: 20px;
-}
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            height: auto;
+            min-height: unset;
+            width: 100%;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            overflow: visible;
+            box-sizing: border-box;
+        }
 
 .experienceBox:hover {
     background-color: rgba(80, 97, 131, 0.936);
@@ -271,48 +296,123 @@ ul {
     transition-delay: 50ms;
 }
 
+.experienceBox h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin: 0.25rem 0 0.25rem
+}
+
 .expIcon {
-    height:125px;
-    width:125px;
+    height: auto;
+    width: clamp(72px, 12vw, 120px);
 }
 
 .expText {
-    font-size: 20px;
-}
+            font-size: clamp(0.96rem, 1.8vw, 1.4rem); 
+            line-height: 1.6x;
+            max-height: none;
+            overflow: visible;
+            text-align: center;
+            margin: 0;
+            padding: 2rem !important;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            display: flex;
+            align-items: center;
+        }
 
 /* === Responsive additions === */
-img { max-width: 100%; height: auto; }
-
-/* Avoid overly tall boxes on small screens */
-@media (max-width: 575.98px) {
-  .experienceBox {
+img {
+    max-width: 100%;
     height: auto;
-    width: 100%;
-    padding: 1rem;
-  }
-  .expIcon { width: 88px; height: 88px; }
-  .expText { font-size: 16px; }
-
-  .inspiritContent { padding-left: 0 !important; margin-top : 20px}
 }
 
-/* Tablets */
-@media (min-width: 576px) and (max-width: 991.98px) {
-  .experienceBox {
+.profile-image {
     height: auto;
-    width: 90%;
-  }
-
-  .inspiritContent { padding-left: 0 !important; margin-top : 20px}
+    width: clamp(100px, 40vw, 250px);
+    display:block !important;
+    margin: 0 auto !important;
+    margin-bottom: 20px !important;
+    border-radius: 15% !important;
+    object-fit: cover !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Keep the original larger layout on desktops */
-@media (min-width: 992px) {
-  .experienceBox {
-    height: 50vh;
-    width: 80%;
-  }
+
+@media (max-width: 576px) {
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    .languageButton {
+        min-height: 70px;
+        margin-bottom: 10px !important;
+    }
+
+    .experienceBox {
+        min-height: 300px;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .section-container {
+        margin: 0.5rem 0;
+        padding: 1rem;
+    }
+
+    .experienceBox {
+        height: unset;
+        padding: 1rem;
+    }
+
+    .profile-image {
+        width: 150px;
+    }
+}
+
+/* Tablet adjustments */
+@media (min-width: 577px) and (max-width: 992px) {
+    .languageButton {
+        max-width: 180px;
+        min-height: 90px;
+    }
+
+    .experienceBox {
+        min-height: 380px;
+    }
+}
+
+/* Desktop adjustments */
+@media (min-width: 993px) {
+    .experienceBox {
+        min-height: 500px;
+    }
+
+    .languageButton {
+        max-width: 200px;
+        min-height: 100px;
+    }
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 /* Make long headings wrap nicely */
-.mainTitle, .subTitles { word-wrap: break-word; overflow-wrap: anywhere; }
+.mainTitle,
+.subTitles {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+}
